@@ -9,7 +9,7 @@ public abstract class Receta {
     private  int porciones;
     private List<Ingrediente> ingredientes = new ArrayList<>();
     private List<Paso> pasos = new ArrayList<>();
-    private int contadorPasos = 0; // <- NUEVO CONTADOR
+    private int contadorPasos = 0; 
 
     public Receta(String nombre) {
         this.nombre = nombre;
@@ -25,7 +25,7 @@ public abstract class Receta {
 
     public void agregarPaso(Paso paso) {
         pasos.add(paso);
-        contadorPasos++;                 // <--- SUMA 1 CADA VEZ QUE AGREGAS UN PASO
+        contadorPasos++;                
     }
 
     public int getTotalPasos() {
@@ -33,7 +33,7 @@ public abstract class Receta {
     }
 
     public void imprimir() {
-        System.out.println("\n===== " + nombre + " =====");
+        System.out.println("\n " + nombre + " ");
         System.out.println("Porciones: " + porciones + "\n");
 
         System.out.println("Ingredientes:");
@@ -46,7 +46,7 @@ public abstract class Receta {
             p.imprimir();
         }
 
-        // MOSTRAR TOTAL
         System.out.println("\nTotal de pasos: " + getTotalPasos());
     }
 }
+
